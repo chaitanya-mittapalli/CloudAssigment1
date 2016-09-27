@@ -5,15 +5,25 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>Result Window</title>
 </head>
 <body>
+<div class="jumbotron text-center">
+  <h1>Result Window</h1> 
+</div>
 <%
     Customer customer=(Customer)request.getAttribute("cust");
 %>
+<div class="alert alert-success">
+    <strong>Success!</strong> Please check the below Result Window for Details
+  </div>
 <table align="center" bgcolor="##99ABCD" border="1" width="50%">
-    <tr>
-        <td colspan="2" align="center"><%="Welcome "+customer.getName()+" !!!!. Your details Processed." %></td>
+    <tr >
+         <td colspan="2" align="center"> <span class="label label-success"><%="Welcome "+customer.getName()+" !!!!. Your details Processed." %></span></td>
     </tr>
     <tr>
         <td>Name </td>
@@ -30,7 +40,8 @@
     </tr>
    
 </table>
-<div style="text-align:center">
-  <a href="index.jsp">Click here to redirect</a>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
-</div></body>
+
+ <ul class="pager">
+  <li><a href="index.jsp">Click here to redirect</a></li>
+</ul>
 </html>

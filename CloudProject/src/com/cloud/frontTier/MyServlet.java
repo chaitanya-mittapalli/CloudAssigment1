@@ -71,6 +71,7 @@ public class MyServlet extends HttpServlet
       }
 	  catch(Exception e)
 	  {
+	        RequestDispatcher dispatcher=request.getRequestDispatcher("/index.jsp");
           e.printStackTrace();
       }
       
