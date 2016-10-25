@@ -22,12 +22,12 @@
     </tr>
     <tr>
         <td><p class="bg-primary">Your Name</p> </td>
-        <td><input type="text" name="name" maxlength="25" id="name" required></td>
+        <td><input type="text" name="name" maxlength="25" id="name" placeholder="Enter your name here" required></td>
     </tr>
      
     <tr>
         <td>  <p class="bg-info">Number to Validate</p></td>
-        <td><input type="text" name="number" maxlength="40" id="number" required></td>
+        <td><input type="number" name="number" maxlength="40" id="number" placeholder="Enter number here"  required></td>
     </tr>
     
     <td colspan="2" align="center"><input type="submit" value="Submit" onclick="return myFunction()"></td>

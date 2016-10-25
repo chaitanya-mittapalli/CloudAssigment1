@@ -5,7 +5,7 @@ public class Customer
 {
     private String name;
     private int number;
-    private boolean isPrime;
+    private boolean isPrime=false;
    
     public String getName() {
         return name;
@@ -38,8 +38,6 @@ public class Customer
 	public boolean getPrime() {
 		return isPrime;
 	}
-	public void setPrime(boolean isPrime) {
-		this.isPrime = isPrime;
-	}
+	
 
 }
