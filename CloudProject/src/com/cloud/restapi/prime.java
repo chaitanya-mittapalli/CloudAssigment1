@@ -23,8 +23,16 @@ public class prime
 	cust.setName(name);
 	cust.validate(f);
 	json.put("Number",cust.getNumber());
-	json.put("Name", cust.getName());
-	json.put("Result", cust.getPrime());
+	json.put("UserName", cust.getName());
+	if(cust.getPrime())
+	{
+		json.put("Result","Number is Prime");
+	}
+	else
+	{
+		json.put("Result","Number is not Prime");	
+	}
+	json.put("LogValue",cust.getLogValue(f));
 	return Response.status(200).entity(json.toString()).build();
 	}
 	
@@ -46,8 +54,16 @@ public class prime
 	cust.setName(name);
 	cust.validate(f);
 	json.put("Number",cust.getNumber());
-	json.put("Name", cust.getName());
-	json.put("Result", cust.getPrime());
+	json.put("UserName", cust.getName());
+	if(cust.getPrime())
+	{
+		json.put("Result","Number is Prime");
+	}
+	else
+	{
+		json.put("Result","Number is not Prime");	
+	}
+	json.put("LogValue",cust.getLogValue(f));
 	return Response.status(200).entity(json.toString()).build();
 	}
 	

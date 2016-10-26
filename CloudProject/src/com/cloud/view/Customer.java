@@ -38,6 +38,9 @@ public class Customer
 	public boolean getPrime() {
 		return isPrime;
 	}
-	
+	public Double getLogValue(int number)
+	{
+		return Math.log(number);
+	}
 
 }
