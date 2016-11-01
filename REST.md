@@ -14,10 +14,6 @@ Required:
 name=[String]
 number=[integer]
 
-Data Params:
-
-None
-
 Success Response:
 
 Code: HTTP 200 
