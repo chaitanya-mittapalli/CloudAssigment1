@@ -6,6 +6,7 @@ public class Customer
     private String name;
     private int number;
     private boolean isPrime=false;
+    private double logValue;
    
     public String getName() {
         return name;
@@ -41,6 +42,10 @@ public class Customer
 	public Double getLogValue(int number)
 	{
 		return Math.log(number);
+	}
+	public void setLogValue(int number)
+	{
+		logValue=Math.log(number);
 	}
 
 }

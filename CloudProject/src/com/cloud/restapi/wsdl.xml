@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rsdl>
+	<description>A Prime Validator validates whether the input number is Prime or not.
+	The operation will accept, as input, integer values to be validated. Also the service will return the logarithamic value of input integer.  
+	The API service offered by this app are named prime and will be accessible at /api/prime. 
+	The service will take the  above value as GET and POST parameters ,and will yield a JSON-formatted result.
+	</description>
+	<version major="1" minor="0" build="0" revision="12" />
+	<links>
+		<link rel="get" href="/api/prime">
+			<request>
+				<url>
+					<parameters_set>
+						<parameter type="xs:integer" required="true">
+							<name>number</name>
+							<value>Number to be validated</value>
+						</parameter>
+						<parameter type="xs:string" required="true">
+							<name>adj</name>
+							<value>Name of the User</value>
+						</parameter>
+					</parameters_set>
+				</url>
+			</request>	
+			<response>
+				<type>JSON containing result of prime validation and Log value</type>
+			</response>
+		</link>
+		<link rel="post" href="/api/prime">
+			<request>
+				<url>
+					<parameters_set>
+						<parameter type="xs:integer" required="true">
+							<name>number</name>
+							<value>Number to be validated</value>
+						</parameter>
+						<parameter type="xs:string" required="true">
+							<name>adj</name>
+							<value>Name of the User</value>
+						</parameter>
+					</parameters_set>
+				</url>
+			</request>
+			<response>
+				<type>JSON containing result of prime validation and Log value</type>
+			</response>
+		</link>
+		
+
+	</links>
+</rsdl>
