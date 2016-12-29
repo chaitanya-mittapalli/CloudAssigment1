@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>Welcome to Prime validator</title>
+</head>
+<body>
+ 
+<div class="jumbotron text-center">
+  <h1>Prime Validator Page</h1>
+  <p>Please Enter the Details in the below table!</p> 
+</div>
+<table align="center" class="table table-striped">
+    <tr>
+        <td colspan="2" align="center">Enter a Number to Validate Prime or not </td>
+    </tr>    
+    <tr>
+        <td>  <p class="bg-info">Number to Validate</p></td>
+        <td><input type="number" name="number" maxlength="40" id="number" placeholder="Enter number here"  required></td>
+    </tr>
+    
+    <td colspan="2" align="center"><input type="submit" value="submit" id="submit"></td>
+    
+</table>
+<h2 id="green" style="color:green;"></h2>
+<h2 id="red" style="color:red;"></h2>
+</body>
+<script>
+
+       $("#submit").click(function(event)
+     {
+			  $('#red').show();			  
+			  $('#green').show();
+
+    	   
+		var number=document.getElementById("number").value;
+		jQuery.ajax({
+			type: "GET",
+			url: "MyAjaxServlet",
+			//dataType: 'json',
+			data: {num:number},
+			success: function(res) {
+			if (res)
+			{
+				if(res=="The Number is Prime")
+					{
+					console.log(1)
+					  $("#green").text(res);
+					  $('#red').hide();
+					}
+				else
+					{
+					console.log(2)
+					  $("#red").text(res);
+					  $('#green').hide();
+
+					}
+			  $("#green").text(res);
+			}
+			},
+			error: function ( jqXHR, textStatus, errorThrown )
+			{
+				console.log(jqXHR);
+				console.log(textStatus);
+				console.log(errorThrown);
+				alert(errorThrown);
+			}
+			
+		});
+	});
+	
+</script>
+</html>

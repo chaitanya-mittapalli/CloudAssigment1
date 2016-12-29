@@ -4,6 +4,8 @@
 	The operation will accept, as input, integer values to be validated. Also the service will return the logarithamic value of input integer.  
 	The API service offered by this app are named prime and will be accessible at /api/prime. 
 	The service will take the  above value as GET and POST parameters ,and will yield a JSON-formatted result.
+	Also the Application has a weather API built in it whicb takes the input as a name of the city and 
+	return the response in the JSON format about the weather details og the city.
 	</description>
 	<version major="1" minor="0" build="0" revision="12" />
 	<links>
@@ -45,7 +47,36 @@
 				<type>JSON containing result of prime validation and Log value</type>
 			</response>
 		</link>
-		
+			<link rel="get" href="/api/weather">
+			<request>
+				<url>
+					<parameters_set>
+						<parameter type="xs:string" required="true">
+							<name>city</name>
+							<value>Name of the city to get Weather info</value>
+						</parameter>
+					</parameters_set>
+				</url>
+			</request>
+			<response>
+				<type>JSON containing Weather data of the requested city</type>
+			</response>
+		</link>
+		<link rel="post" href="/api/weather">
+			<request>
+				<url>
+					<parameters_set>
+						<parameter type="xs:string" required="true">
+							<name>city</name>
+							<value>Name of the city to get Weather info</value>
+						</parameter>
+					</parameters_set>
+				</url>
+			</request>
+			<response>
+				<type>JSON containing Weather data of the requested city</type>
+			</response>
+		</link>
 
 	</links>
 </rsdl>

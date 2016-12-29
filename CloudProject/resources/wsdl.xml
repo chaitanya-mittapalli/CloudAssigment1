@@ -45,7 +45,35 @@
 				<type>JSON containing result of prime validation and Log value</type>
 			</response>
 		</link>
-		
-
+			<link rel="get" href="/api/weather">
+			<request>
+				<url>
+					<parameters_set>
+						<parameter type="xs:string" required="true">
+							<name>city</name>
+							<value>Name of the city to get Weather info</value>
+						</parameter>
+					</parameters_set>
+				</url>
+			</request>
+			<response>
+				<type>JSON containing Weather data of the requested city</type>
+			</response>
+		</link>
+		<link rel="post" href="/api/weather">
+			<request>
+				<url>
+					<parameters_set>
+						<parameter type="xs:string" required="true">
+							<name>city</name>
+							<value>Name of the city to get Weather info</value>
+						</parameter>
+					</parameters_set>
+				</url>
+			</request>
+			<response>
+				<type>JSON containing Weather data of the requested city</type>
+			</response>
+		</link>
 	</links>
 </rsdl>

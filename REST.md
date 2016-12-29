@@ -1,3 +1,5 @@
+This REST API Service Will take a input as a number and will return the output Whether the number in prime or not and the logarithmic value of the number.
+
 URL
 
 54.244.144.50:8080/CloudProject/api/prime
