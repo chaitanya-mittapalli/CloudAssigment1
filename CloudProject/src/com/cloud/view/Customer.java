@@ -8,14 +8,17 @@ public class Customer
     private boolean isPrime=false;
     private double logValue;
    
-    public String getName() {
+    public String getName() 
+    {
         return name;
     }
-    public void setName(String name) {
+    public void setName(String name) 
+    {
         this.name = name;
     }
     
-    public int getNumber() {
+    public int getNumber() 
+	{
 		return number;
 	}
 	public void setNumber(int number) {
@@ -36,6 +39,7 @@ public class Customer
 		}
 		
 	}
+
 	public boolean getPrime() {
 		return isPrime;
 	}
